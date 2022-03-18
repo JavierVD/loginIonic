@@ -40,13 +40,16 @@ export class LoginPage implements OnInit {
 
 
     if (usuario.nombre == f.nombre && usuario.password == f.password) {
+      //si los datos existen, generamos en el localstorage el inicio de sesión
       console.log('Ingresado');
       const session ={
         usuario: f.nombre,
+        //obtenemos la fecha actual
         fecha: new Date()
       };
 
       localStorage.setItem('current_session', JSON.stringify(session));
+      //como sí hay un registro, vamos a inicio
       this.navCtrl.navigateRoot('/inicio');
       const alert = await this.alertController.create({
         header: 'Acceso Correcto',

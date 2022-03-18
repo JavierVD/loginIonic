@@ -43,13 +43,14 @@ export class RegistroPage implements OnInit {
       await alert.present();
       return;
     }
-    console.log("click");
     
     const usuario = {
       nombre: f.nombre,
       password: f.password,
     };
+
     if(f.password == f.confirmacionPassword){
+      //navegamos nuevamente al login si el registro se hizo de forma exitosa y si las contraseñas coinciden
       localStorage.setItem('usuario', JSON.stringify(usuario));
       this.navCtrl.back();
     }else{
