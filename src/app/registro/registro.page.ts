@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; //Para relacionar los archivos de cada ventana de la aplicación
 import {
   FormGroup,
   FormControl,
   Validators,
   FormBuilder,
-} from '@angular/forms';
-import { AlertController, NavController } from '@ionic/angular';
+} from '@angular/forms'; //librerías que relacionan Typescript(programación) con HTML
+import { AlertController, NavController } from '@ionic/angular'; //Elementos visuales con estilo de Ionic
 import { Alert } from 'selenium-webdriver';
 
 @Component({
